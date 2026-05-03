@@ -1,47 +1,67 @@
-from Game.Levels import Lvl1
-from Game.Levels import Lvl2
-from Game.Levels import Lvl3
-from Game.Levels import Lvl4
-from Game.Levels import Lvl5
+from Levels import Lvl1
+from Levels import Lvl2
+from Levels import Lvl3
+from Levels import Lvl4
 
 
+def gameend():
+    print("Wow! You somehow made it out? Enjoy this, because it may not happen again!")
 
 def startgame():
-    print("Insert intro text here")
 
-    lvl1pass = Lvl1.run()
+    print("Welcome to the game! You will play 4 different levels, each with increasing difficulty. If you fail one, you will have to start from the beginning. Best of luck!")
 
-    if lvl1pass: 
-        print("Insert lvl2 intro text here")
-    else:
-        print("you die!")
-
-        lvl2pass = Lvl2.run()
-
-        if lvl2pass:
-            print("Insert lvl3 intro text here")
-        else:
-            print("you die!")
-
-            lvl3pass = Lvl3.run()
-
-            if lvl3pass:
-                print("Insert lvl4 intro text here")
-            else:
-                print("you die!")
-
-                lvl4pass = Lvl4.run()
-
-                if lvl4pass:
-                    print("Insert lvl5 intro text here")
+    lvl1success = Lvl1.run()
+    if lvl1success:
+        
+        lvl2result = Lvl2.run()
+        if lvl2result == 1:
+            
+            lvl3success = Lvl3.rundifficulty1()
+            if lvl3success:
+                
+                lvl4success = Lvl4.run()
+                if lvl4success:
+                    gameend()
                 else:
-                    print("you die!")
+                    return startgame()
+            else:
+                return startgame()
+            
+        elif lvl2result == 2:
+            
+            lvl3success = Lvl3.rundifficulty2()
+            if lvl3success:
+                
+                lvl4success = Lvl4.run()
+                if lvl4success:
+                    gameend()
+                else:
+                    return startgame()
+            else:
+                return startgame()
+            
+        elif lvl2result == 3:
 
-                    lvl5pass = Lvl5.run()
+            lvl3success = Lvl3.rundifficulty3()
+            if lvl3success:
+                
+                lvl4success = Lvl4.run()
+                if lvl4success:
+                    gameend()
+                else:
+                    return startgame()
+            else:
+                return startgame()
+    else:
+        return startgame()
+    
 
-                    if lvl5pass:
-                        print("Insert game ending text here")
-                    else:
-                        print("you die!")
 
+        
+
+
+startgame()
+
+    
 
