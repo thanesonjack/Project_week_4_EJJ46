@@ -91,11 +91,3 @@ def run():
     if totalattempts == 0:
         print("Oh dear, you have fallen at the final hurdle. You have run out of attemps. You die of starvation, desparately close to escaping the prison.")
 
-
-run()
-
-
-
-
-
-

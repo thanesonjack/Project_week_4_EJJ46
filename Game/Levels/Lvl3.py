@@ -151,4 +151,3 @@ def rundifficulty3():
             return False
 
 
-rundifficulty3()
