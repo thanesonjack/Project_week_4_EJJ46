@@ -9,13 +9,6 @@ maze = [
     ["X", "X", "X", "X", "X", "X", "X", "X"]
 ]
 
-display_map = {
-    "X": "█",
-    ".": " ",
-}
-
-
-
 def playermovement(position, direction):
     
     row, col = position
