@@ -1,7 +1,7 @@
-from Levels import Lvl1
-from Levels import Lvl2
-from Levels import Lvl3
-from Levels import Lvl4
+from Game.Levels import Lvl1
+from Game.Levels import Lvl2
+from Game.Levels import Lvl3
+from Game.Levels import Lvl4
 
 
 def gameend():
@@ -57,11 +57,4 @@ def startgame():
         return startgame()
     
 
-
-        
-
-
-startgame()
-
-    
 
