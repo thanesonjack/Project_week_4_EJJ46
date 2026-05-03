@@ -164,12 +164,11 @@ def run():
             Lvl3difficulty = 2
             printboard()
             print("It's a draw. Progress if you dare...")
-            return 2     #medium difficulty
-            
+            return 2     #medium difficulty            
 
     
 
-run()
+
     
 
 
