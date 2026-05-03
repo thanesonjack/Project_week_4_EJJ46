@@ -48,4 +48,3 @@ def run():
             position = new_position
 
 
-run()
